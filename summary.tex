@@ -1,0 +1,80 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{titling}
+\usepackage{titlesec}
+\usepackage{amsfonts,amsmath,amssymb,amsthm,mathtools}
+\usepackage{icomma}
+\usepackage{cmap}
+\usepackage{mathtext}
+
+\titleformat{\section}
+  {\normalfont\normalsize}{\fbox{}}{1em}{}
+
+\newcommand{\stmnt}[1]{\fbox{\textbf{#1}}}
+\newcommand{\void}{\vspace{\baselineskip}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\abs}[1]{\vert #1\vert}
+
+\setlength{\parindent}{0em}
+\setlength{\droptitle}{-7em}
+
+\usepackage[left=2cm,right=2cm,
+    top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+\title{Алгебра на ФКН ПИ}
+\author{Общий конспект всех лекций за 3 модуль}
+
+\begin{document}
+    \maketitle
+
+    \stmnt{Утв} Пусть $G$ - группа и $g\in G$.
+
+    Тогда $\abs{<g>} = ord(g)$, где $\abs{<g>}$ - число элементов в циклической группе, порожденной элементом $g$.
+
+    \void
+    $\square$ Заметим, что если $g^k = g^s \Rightarrow g^{k-s} = e$ (так как $\exists g^{-1}$) $\Rightarrow$
+    порядок $g \leq k - s \Rightarrow$ если $g$ имеет бесконечный порядок, то все элементы $g^n$ $(n\in\Z)$
+    различны и $\Rightarrow <g>$ содержит бесконечно много элементов. В бесконечном случае доказано.
+    
+    \void
+    Если же $ord(g) = m$, то из минимальности $m\in\N \Rightarrow e=g^0, g=g^1, g^2,\dots,g^{m-1}$ попарно
+    различны. Покажем, что $<g> = \{e, g, g^2,\dots,g^{m-1}\}$:
+
+    $\forall n\in\Z: n = m\cdot q + r$, где $0\leq r \le m \Rightarrow g^n = g^{mq+r} = (g^m)^q\cdot g^r =
+    e^q\cdot g^r = g^r$, где $0\leq r\le m \Rightarrow <g> = \{e,g,g^2,\dots,g^{m-1}\}$
+    и $\abs{<g>} = m = ord(g)$. $\blacksquare$
+
+    \void
+    \stmnt{Утв} Пусть $f: G\implies F$ - гомоморфизм. Тогда $f$ - инъективен (т.е. является мономорфизмом)
+    $\Leftrightarrow \ker{f} = e_G$, где $e_G$ - нейтральный элемент в группе в $G$, а $\ker{f}$ в данном
+    случае является тривиальным \textbf{ядром} гомоморфизма.
+
+    \void
+    \stmnt{Опр} Ядром гомоморфизма $f: G\implies F$ называется множество элементов группы G, которые переходят
+    в $e_F$ - нейтральный элемент во второй группе.
+
+    $$\ker{f} = \{g\in G\vert f(g) = e_F\}$$
+
+    \void
+    \stmnt{Зам} $\ker{f}$ никогда не является пустым множеством, так как по свойству гомоморфизма $f(e_G) = e_F$.
+
+    \void
+    $\square$
+
+    \fbox{$\Rightarrow$} Необходимость:
+
+    Дано: $\forall x_1 \neq x_2: f(x_1)\neq f(x_2)\Rightarrow f(e_G) = e_F$ 
+    (и для $x\in G$ $(x\neq e_G)$ $f(x)\neq f(e_G) = e_F$).
+
+    \fbox{$\Leftarrow$} Достаточность:
+
+    Дано: $\ker{f} = e_G$. Допустим, что $\exists x_1\neq x_2: f(x_1) = f(x_2)$.
+    Тогда $f(x_1\cdot x_2^{-1}) = f(x_1)\cdot f(x_2^{-1}) = f(x_1)\cdot(f(x_2))^{-1} = e_F$
+    $\Rightarrow x_1\cdot x_2^{-1} = e_G \Leftrightarrow x_1 = x_2$ - противоречие, значит,
+    $f$ инъективно. $\blacksquare$
+
+\end{document}
