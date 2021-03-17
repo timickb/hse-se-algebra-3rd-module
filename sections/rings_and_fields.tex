@@ -210,4 +210,24 @@
 
     \void\stmnt{Опр} Если $F\subset P$, то говорят, что Р является расширением поля F.
 
+    \void\void\void
+    \subsection{Важное дополнение, которое Вселеон обещал спросить на экзамене}
+
+    \void\stmnt{Утв} Факторкольцо $P[x]/\cycgr{f(x)}$ 
+    ($\cycgr{f(x)}$ - идеал, порожденный $f(x)$) является полем
+    $\Longleftrightarrow$ многочлен $f$ неприводим над полем $P$.
+
+    \void
+    $\square$ Если $f(x) = f_1(x)\cdot f_2(x)$, где $0 < deg(f_i) < deg(f)$, то
+    $\ol{f_1}, \ol{f_2}\in P[x]/\cycgr{f(x)}$ отличны от нуля, но
+    $\ol{f_1(x)}\cdot \ol{f_2(x)} = \ol{f(x)} = \ol{0} \Longrightarrow$
+    в $P[x]$ есть делители нуля и это не поле.
+
+    Покажем, что если $f(x)$ неприводим, то любой класс вычетов $\ol{a(x)}\neq \ol{0}$ обратим.
+    Представитель $\ol{a(x)}$ - это некоторый многочлен $a(x)$ с $deg(a(x)) < deg(f(x))$.
+
+    Т.к. $f(x)$ неприводим, то он взаимнопрост с $a(x) \Longrightarrow \exists b(x),c(x):$
+    $a\cdot b + c\cdot f = 1$, т.е. $\ol{a}\cdot\ol{b}+\ol{c}\cdot\ol{f}=\ol{1}$, т.е.
+    $\ol{a}\cdot\ol{b}=\ol{1}$ mod $\cycgr{f(x)}$, т.е. $\ol{b}$ - обратный элемент к $\ol{a}$
+    в $P[x]/\cycgr{f(x)}$. $\blacksquare$
 \end{document}

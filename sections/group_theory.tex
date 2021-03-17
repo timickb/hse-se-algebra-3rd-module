@@ -3,20 +3,20 @@
 \begin{document}
 \stmnt{Утв} Пусть $G$ - группа и $g\in G$.
 
-Тогда $\abs{\langle g\rangle} = ord(g)$, где $\abs{\langle g\rangle}$ - число элементов в циклической группе, порожденной элементом $g$.
+Тогда $\abs{\cycgr{g}} = ord(g)$, где $\abs{\cycgr{g}}$ - число элементов в циклической группе, порожденной элементом $g$.
 
 \void
 $\square$ Заметим, что если $g^k = g^s \Rightarrow g^{k-s} = e$ (так как $\exists g^{-1}$) $\Rightarrow$
 порядок $g \leq k - s \Rightarrow$ если $g$ имеет бесконечный порядок, то все элементы $g^n$ $(n\in\Z)$
-различны и $\Rightarrow \langle g\rangle$ содержит бесконечно много элементов. В бесконечном случае доказано.
+различны и $\Rightarrow \cycgr{g}$ содержит бесконечно много элементов. В бесконечном случае доказано.
 
 \void
 Если же $ord(g) = m$, то из минимальности $m\in\N \Rightarrow e=g^0, g=g^1, g^2,\dots,g^{m-1}$ попарно
-различны. Покажем, что $\langle g\rangle = \{e, g, g^2,\dots,g^{m-1}\}$:
+различны. Покажем, что $\cycgr{g} = \{e, g, g^2,\dots,g^{m-1}\}$:
 
 $\forall n\in\Z: n = m\cdot q + r$, где $0\leq r \le m \Rightarrow g^n = g^{mq+r} = (g^m)^q\cdot g^r =
-e^q\cdot g^r = g^r$, где $0\leq r\le m \Rightarrow \langle g\rangle = \{e,g,g^2,\dots,g^{m-1}\}$
-и $\abs{\langle g\rangle} = m = ord(g)$. $\blacksquare$
+e^q\cdot g^r = g^r$, где $0\leq r\le m \Rightarrow \cycgr{g} = \{e,g,g^2,\dots,g^{m-1}\}$
+и $\abs{\cycgr{g}} = m = ord(g)$. $\blacksquare$
 
 \void
 \stmnt{Утв} Пусть $f: G\rightarrow F$ - гомоморфизм. Тогда $f$ - инъективен (т.е. является мономорфизмом)
@@ -130,8 +130,8 @@ $\blacksquare$
 \stmnt{Следствие 1} Пусть $G$ - конечная группа и взят элемент $g\in G$. Тогда $ord(g)$ делит $\abs{G}$.
 
 \void
-$\square$ Возьмем $H = \langle g\rangle$. Мы знаем, что $\abs{\langle g\rangle} = ord(g)$ и
-$\abs{G} = \abs{\langle g\rangle}\cdot [G:H]$, то есть $\abs{G}\vdots ord(g)$.
+$\square$ Возьмем $H = \cycgr{g}$. Мы знаем, что $\abs{\cycgr{g}} = ord(g)$ и
+$\abs{G} = \abs{\cycgr{g}}\cdot [G:H]$, то есть $\abs{G}\vdots ord(g)$.
 $\blacksquare$
 
 \void
@@ -145,17 +145,17 @@ $\blacksquare$
 \void
 \stmnt{Следствие 3} aka Малая Теорема Ферма:
 
-Пусть $\overline{a}$ - ненулевой вычет попростому подулю $p$, тогда $\overline{a}^{p-1} = \overline{1}$,
+Пусть $\ol{a}$ - ненулевой вычет попростому подулю $p$, тогда $\ol{a}^{p-1} = \ol{1}$,
 то есть $a^{p-1}\equiv 1$ (mod $p$).
 
 \void
-\textit{$\overline{0}, \overline{1},\dots,\overline{p-1}$ - вычеты по модулю $p$, то есть остатки от деления
+\textit{$\ol{0}, \ol{1},\dots,\ol{p-1}$ - вычеты по модулю $p$, то есть остатки от деления
 $m\in\Z$ на $p$.}
 
 \void
 $\square$ На самом деле это следствие 2 ($g^{\abs{G}} = e$), примененное к группе 
 $\Z_p^* = \{ \Z_p\backslash \{0\}, \cdot \}$, где $Z_p$ - множество всех вычетов по модулю $p$.
-$\abs{Z_p^*} = p - 1 \Rightarrow \overline{a}^{\abs{Z_p^*}} = e$.
+$\abs{Z_p^*} = p - 1 \Rightarrow \ol{a}^{\abs{Z_p^*}} = e$.
 $\blacksquare$
 
 \void
