@@ -244,10 +244,10 @@ $$dim(H_1+H_2) = r + (n - r) + (m - r) = n + m - r = dim(H_1) + dim(H_2) - dim(H
 
 $\blacksquare$
 
-\void\stmnt{Опр} Сумма подпространств $H_1+H_2$ называется прямой и обозначается $H_1\bigoplus H_2$, если
+\void\stmnt{Опр} Сумма подпространств $H_1+H_2$ называется прямой и обозначается $H_1\oplus H_2$, если
 $H_1\cap H_2 = \{0\}$, т.е. тривиально.
 
-\void\stmnt{Следствие} $dim(H_1\bigoplus H_2) = dim(H_1) + dim(H_2)$.
+\void\stmnt{Следствие} $dim(H_1\oplus H_2) = dim(H_1) + dim(H_2)$.
 
 \void\stmnt{Утв} $H_1 + H_2$ является прямой суммой $\Longleftrightarrow \forall x\in H_1+H_2$
 единственным образом представляется в виде $x = x_1+x_2$, где $x_1\in H_1, x_2\in H_2$ (Критерий прямоты).
@@ -268,7 +268,7 @@ $\forall\beta\in F$: $x = (1-\beta)x + \beta x \Longrightarrow$ представ
 $\blacksquare$
 
 \void
-Пусть $L = H_1\bigoplus H_2$. Тогда $\forall x\in L$ может быть представлен единственным образом в виде
+Пусть $L = H_1\oplus H_2$. Тогда $\forall x\in L$ может быть представлен единственным образом в виде
 $x = y + z$, где $y\in H_1$, $z\in H_2$. 
 
 \void\stmnt{Опр} $y$ называется проекцией $x$ на $H_1$ вдоль $H_2$, а $z$ - проекцией $x$ На
@@ -308,7 +308,7 @@ $b(e_i,e_j)$ обозначим как $b_{ij}$.
 \void\stmnt{Утв} Пусть $U$ - матрица перехода от базиса $e$ к базису $f$. Пусть $B_e$ - матрица билинейной формы
 в базисе $e$, $B_f$ - аналогично в базисе $f$.
 
-Тогда $B_f = U^T\cdot b_e\cdot U$.
+Тогда $B_f = U^T\cdot B_e\cdot U$.
 
 \void $\square$ $b(x,y) = (x^e)^T\cdot B_e\cdot y^e = ...$ (здесь $x^e$ - столбец координат в базисе $e$).
 
@@ -323,13 +323,13 @@ $\blacksquare$
 \subsection{Квадратичные формы}
 
 \void\stmnt{Опр} Однородный многочлен от $n$ переменных, т.е.
-$$Q(x) = \sum_{i=1}^n a_{ii} x_i^2 + 2\cdot\sum_{1\leq i\leq j\leq n} a_{ij} x_i x_j$$
+$$Q(x) = \sum_{i=1}^n a_{ii} x_i^2 + 2\cdot\sum_{1\leqslant i\leqslant j\leqslant n} a_{ij} x_i x_j$$
 
 $a_{ij}\in\R$ называют квадратичной формой.
 
 \void
 Рассмотрим $n$-мерное векторное пространство над $\R$. Выберем в нем базис $e_1,...,e_n$, и тогда
-у произвольного вектора $x$ будет столбец координат $x^e = \mx(x_1\\.\\.\\.\\x_n) \Longrightarrow
+у произвольного вектора $x$ будет столбец координат $x^e = \mx{x_1\\.\\.\\.\\x_n} \Longrightarrow
 Q(x)$ можно представить в виде $Q(x) = (x^e)^T\cdot A\cdot x^e$, где $A = (a_{ij})$ - коэффициенты из
 формулы в определении.
 
@@ -374,12 +374,12 @@ $$ Q(x) = \ub{X^T\cdot A\cdot X}_{\textbf{в базисе e}} =
 Тогда $Rg(AS) = RgA = Rg(SA)$ (т.е. умножение на невырожденную матрицу справа и слева не меняют
 ранг матрицы А).
 
-\void $\square$ $Rg(AS)\leq RgA$ (т.к. столбцы матрицы $AS$ - это линейные комбинации столбцов матрицы A).
+\void $\square$ $Rg(AS)\leqslant RgA$ (т.к. столбцы матрицы $AS$ - это линейные комбинации столбцов матрицы A).
 
 Ранг $=$ максимальное количество линейно независимых столбцов (из теормы о ранге матрицы) $\Longrightarrow$
-число линейно независимых столбцов не может вырасти и $Rg(AS)\leq RgA$.
+число линейно независимых столбцов не может вырасти и $Rg(AS)\leqslant RgA$.
 
-$$ RgA = Rg(A\ub{SS^{-1}}_{E})\leq Rg(AS) \Longrightarrow RgA = Rg(AS)$$
+$$ RgA = Rg(A\ub{SS^{-1}}_{E})\leqslant Rg(AS) \Longrightarrow RgA = Rg(AS)$$
 $\blacksquare$
 
 \void\stmnt{Утв} (об инвариантности ранга)
@@ -661,6 +661,7 @@ $\varphi$ - линейный оператор. ($dimV = dim(Ker\varphi) + dim(Im
 
 \void\stmnt{Пример} $D: g\mapsto g^{'}$ в $\R_n[x]$ (D - операция дифференцирования).
 
+\void
 $dim(\R_n[x]) = n+1$,
 
 $ImD = \R_{n-1}[x]\Longrightarrow dim(ImD) = n$,
